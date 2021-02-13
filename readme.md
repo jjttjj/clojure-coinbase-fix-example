@@ -16,7 +16,7 @@ CAfile = /path/to/fix-public.sandbox.pro.coinbase.com.pem
 ```
 
 Also assumes you have an environment variable or variables with your coinbase credentials. You will need to get your credentials in the following format:
-```
+```clojure
 {:secret "my secret",
  :key "my key",
  :passphrase "my passphrase"}
@@ -26,7 +26,7 @@ I just use the printed string of this directly in the environmental variable `"C
 
 ## usage
 
-```
+```clojure
 (require [fix :refer :all])
 
 (def cb-creds (read-string (System/getenv "CB-SANDBOX-CREDS")))
